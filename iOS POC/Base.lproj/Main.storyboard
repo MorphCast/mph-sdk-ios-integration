@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9P4-P3-XWS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8uA-vS-HRa">
+            <objects>
+                <navigationController id="9P4-P3-XWS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2NS-Ux-bNR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uwp-A2-9gF" kind="relationship" relationship="rootViewController" id="IBP-TL-2SZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwi-rd-zZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-389" y="220"/>
+        </scene>
+        <!--iOS POC-->
+        <scene sceneID="r9E-RZ-WpE">
+            <objects>
+                <viewController id="Uwp-A2-9gF" customClass="CameraViewController" customModule="iOS_POC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVd-RO-3nh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80x-Ps-Ggj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="554"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-8E-NFc" userLabel="CameraActionView">
+                                <rect key="frame" x="0.0" y="642" width="414" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5q-zo-4uM" userLabel="lbAgeName">
+                                        <rect key="frame" x="10" y="10" width="44" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffN-z8-akf" userLabel="lbAgeValue">
+                                        <rect key="frame" x="64" y="10" width="14" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-nv-Qjs" userLabel="lbGenderName">
+                                        <rect key="frame" x="10" y="46.5" width="77" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-hs-zC4" userLabel="lbGenderValue">
+                                        <rect key="frame" x="97" y="46.5" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u5q-zo-4uM" secondAttribute="trailing" constant="20" symbolic="YES" id="Hr7-sA-4hF"/>
+                                    <constraint firstItem="LOv-hs-zC4" firstAttribute="leading" secondItem="hPY-nv-Qjs" secondAttribute="trailing" constant="10" id="I14-7L-oOp"/>
+                                    <constraint firstItem="LOv-hs-zC4" firstAttribute="top" secondItem="ffN-z8-akf" secondAttribute="bottom" constant="10" id="P79-mx-hPs"/>
+                                    <constraint firstItem="u5q-zo-4uM" firstAttribute="top" secondItem="KKv-8E-NFc" secondAttribute="top" constant="10" id="WuW-TV-QQP"/>
+                                    <constraint firstItem="hPY-nv-Qjs" firstAttribute="leading" secondItem="KKv-8E-NFc" secondAttribute="leading" constant="10" id="Xi1-B6-Ytd"/>
+                                    <constraint firstItem="ffN-z8-akf" firstAttribute="leading" secondItem="u5q-zo-4uM" secondAttribute="trailing" constant="10" id="ZE3-lu-9tV"/>
+                                    <constraint firstItem="ffN-z8-akf" firstAttribute="top" secondItem="KKv-8E-NFc" secondAttribute="top" constant="10" id="cy2-Gr-QAI"/>
+                                    <constraint firstAttribute="height" constant="220" id="eX3-pd-vnn"/>
+                                    <constraint firstItem="hPY-nv-Qjs" firstAttribute="top" secondItem="u5q-zo-4uM" secondAttribute="bottom" constant="10" id="jlB-5w-ZLJ"/>
+                                    <constraint firstItem="u5q-zo-4uM" firstAttribute="leading" secondItem="KKv-8E-NFc" secondAttribute="leading" constant="10" id="rjQ-SZ-hOA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KKv-8E-NFc" firstAttribute="leading" secondItem="c64-aZ-Uvc" secondAttribute="leading" id="99X-V9-Cbz"/>
+                            <constraint firstItem="80x-Ps-Ggj" firstAttribute="trailing" secondItem="c64-aZ-Uvc" secondAttribute="trailing" id="9aF-a6-HBD"/>
+                            <constraint firstItem="KKv-8E-NFc" firstAttribute="trailing" secondItem="c64-aZ-Uvc" secondAttribute="trailing" id="Mug-Ua-8u7"/>
+                            <constraint firstItem="80x-Ps-Ggj" firstAttribute="top" secondItem="c64-aZ-Uvc" secondAttribute="top" id="QiB-VU-XaM"/>
+                            <constraint firstItem="KKv-8E-NFc" firstAttribute="bottom" secondItem="c64-aZ-Uvc" secondAttribute="bottom" id="gEg-cn-4c6"/>
+                            <constraint firstItem="KKv-8E-NFc" firstAttribute="top" secondItem="80x-Ps-Ggj" secondAttribute="bottom" id="kCS-ty-HOh"/>
+                            <constraint firstItem="80x-Ps-Ggj" firstAttribute="leading" secondItem="c64-aZ-Uvc" secondAttribute="leading" id="vCF-4L-CUO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c64-aZ-Uvc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS POC" id="hVg-G0-76Q"/>
+                    <connections>
+                        <outlet property="cameraActionView" destination="KKv-8E-NFc" id="xNp-ku-siR"/>
+                        <outlet property="lbAgeValue" destination="ffN-z8-akf" id="6wk-Ou-5P0"/>
+                        <outlet property="lbGenderValue" destination="LOv-hs-zC4" id="evW-gf-EGp"/>
+                        <outlet property="previewView" destination="80x-Ps-Ggj" id="pGd-bk-LDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVT-aI-d42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="220"/>
+        </scene>
+    </scenes>
+</document>
